@@ -1,0 +1,13 @@
+services:
+  front:
+    image: product-trial-front:latest
+    build:
+      context: ./front
+    ports:
+      - 4200:4200
+    volumes:
+      - ./front:/usr/src/app
+  back:
+    image: product-trial-back:latest
+    build:
+      context: ./back
