@@ -18,7 +18,9 @@
 				"ms-python.vscode-pylance",
 				"ms-python.python",
 				"ms-python.debugpy",
-				"EditorConfig.EditorConfig"
+				"EditorConfig.EditorConfig",
+				"ms-python.black-formatter",
+				"ms-python.isort"
 			]
 		}
 	}
