@@ -1,5 +1,7 @@
 services:
   back:
+    build:
+      target: dev
     volumes:
       - ..:/workspaces:cached
 
