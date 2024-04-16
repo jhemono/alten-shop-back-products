@@ -9,3 +9,5 @@ services:
     image: product-trial-back:latest
     build:
       context: ./back
+    ports:
+      - 5000:5000

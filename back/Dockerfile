@@ -13,3 +13,8 @@ RUN pip install --no-cache-dir -r dev-requirements.txt
 
 
 FROM base AS prod
+
+COPY product_trial/ ./product_trial
+COPY gunicorn.conf.py .
+
+CMD ["gunicorn", "product_trial:create_app()"]
