@@ -20,7 +20,8 @@
 				"ms-python.debugpy",
 				"EditorConfig.EditorConfig",
 				"ms-python.black-formatter",
-				"ms-python.isort"
+				"ms-python.isort",
+				"humao.rest-client"
 			]
 		}
 	}

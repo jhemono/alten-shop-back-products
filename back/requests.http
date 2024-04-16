@@ -1,0 +1,60 @@
+
+### Get all products
+GET http://localhost:5000/products
+
+### Create product
+POST http://localhost:5000/products
+content-type: application/json
+
+{
+    "code": "f230fh0g3",
+    "name": "Bamboo Watch",
+    "description": "A very technical watch.",
+    "image": "bamboo-watch.jpg",
+    "price": 65,
+    "category": "Accessories",
+    "quantity": 24,
+    "inventoryStatus": "INSTOCK"
+}
+
+### Create product with missing field
+POST http://localhost:5000/products
+content-type: application/json
+
+{
+    "code": "f230fh0g3",
+    "name": "Bamboo Watch",
+    "image": "bamboo-watch.jpg",
+    "price": 65,
+    "category": "Accessories",
+    "quantity": 24,
+    "inventoryStatus": "INSTOCK"
+}
+
+### Get product 1
+GET http://localhost:5000/products/1
+
+### Get unknown product
+GET http://localhost:5000/products/500
+
+
+### Edit product
+PATCH http://localhost:5000/products/1
+content-type: application/json
+
+{
+    "name": "Punk Bamboo Watch",
+    "rating": 4
+}
+
+### Revert product
+PATCH http://localhost:5000/products/1
+content-type: application/json
+
+{
+    "name": "Bamboo Watch",
+    "rating": 5
+}
+
+### Remove product
+DELETE http://localhost:5000/products/1
