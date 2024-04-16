@@ -19,7 +19,7 @@ class ProductCatalogAPI(Resource):
         product = product_schema.load(json_data)
         db.session.add(product)
         db.session.commit()
-        return product_schema.dump(product)
+        return product_schema.dump(product), 201
 
 
 class ProductAPI(MethodView):
@@ -39,7 +39,7 @@ class ProductAPI(MethodView):
         product = db.get_or_404(Product, id)
         db.session.delete(product)
         db.session.commit()
-        return "OK"
+        return None, 204
 
 
 api.add_resource(ProductAPI, "/<int:id>")
