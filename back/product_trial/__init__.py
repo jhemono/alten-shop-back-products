@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 
 from product_trial.models import db
@@ -5,7 +7,7 @@ from product_trial.schemas import ma
 
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, instance_path=os.environ.get("DATA_DIR", None))
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///products.db"
 
     # Initialize database
