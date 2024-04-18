@@ -4,6 +4,7 @@ from flask import Flask
 
 from product_trial.models import db
 from product_trial.schemas import ma
+from product_trial.swagger import sw
 
 
 def create_app():
@@ -17,6 +18,9 @@ def create_app():
 
     # Initialize Marshmallow
     ma.init_app(app)
+
+    # Swagger
+    sw.init_app(app)
 
     # Register blueprints
     from . import products

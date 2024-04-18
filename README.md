@@ -10,7 +10,7 @@ L'image docker est product-trial-front:latest. Le service docker compose est "fr
 
 ## Back-end
 
-Ce service est basé sur Flask, Flask-RESTful, SQLAlchemy et Marshmallow. Les données sont stockées dans une base SQLite dans un volume docker. Gunicorn est utilisé comme serveur HTTP de production.
+Ce service est basé sur Flask, Flask-RESTful, SQLAlchemy et Marshmallow. Les données sont stockées dans une base SQLite dans un volume docker. Gunicorn est utilisé comme serveur HTTP de production. Une documentation Swagger est rendue disponible sur http://localhost:5000/apidocs/.
 
 L'image docker est product-trial-back:latest. Le service docker compose est "back" et il écoute sur le port 5000.
 

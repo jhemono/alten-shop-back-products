@@ -2,5 +2,8 @@ Flask
 Flask-RESTful
 Flask-SQLAlchemy
 flask-marshmallow
+Marshmallow
 marshmallow-sqlalchemy
 gunicorn
+Flasgger
+APISpec

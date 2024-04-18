@@ -6,13 +6,22 @@
 #
 aniso8601==9.0.1
     # via flask-restful
+apispec==6.6.0
+    # via -r requirements.in
+attrs==23.2.0
+    # via
+    #   jsonschema
+    #   referencing
 blinker==1.7.0
     # via flask
 click==8.1.7
     # via flask
+flasgger==0.9.7.1
+    # via -r requirements.in
 flask==3.0.3
     # via
     #   -r requirements.in
+    #   flasgger
     #   flask-marshmallow
     #   flask-restful
     #   flask-sqlalchemy
@@ -30,24 +39,45 @@ itsdangerous==2.1.2
     # via flask
 jinja2==3.1.3
     # via flask
+jsonschema==4.21.1
+    # via flasgger
+jsonschema-specifications==2023.12.1
+    # via jsonschema
 markupsafe==2.1.5
     # via
     #   jinja2
     #   werkzeug
 marshmallow==3.21.1
     # via
+    #   -r requirements.in
     #   flask-marshmallow
     #   marshmallow-sqlalchemy
 marshmallow-sqlalchemy==1.0.0
     # via -r requirements.in
+mistune==3.0.2
+    # via flasgger
 packaging==24.0
     # via
+    #   apispec
+    #   flasgger
     #   gunicorn
     #   marshmallow
 pytz==2024.1
     # via flask-restful
+pyyaml==6.0.1
+    # via flasgger
+referencing==0.34.0
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
+rpds-py==0.18.0
+    # via
+    #   jsonschema
+    #   referencing
 six==1.16.0
-    # via flask-restful
+    # via
+    #   flasgger
+    #   flask-restful
 sqlalchemy==2.0.29
     # via
     #   flask-sqlalchemy
