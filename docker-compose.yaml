@@ -4,13 +4,13 @@ services:
     build:
       context: ./front
     ports:
-      - 4200:4200
+      - 4200/tcp
   back:
     image: product-trial-back:latest
     build:
       context: ./back
     ports:
-      - 5000:5000
+      - 5000/tcp
     environment:
       - DATA_DIR=/data
     volumes:
