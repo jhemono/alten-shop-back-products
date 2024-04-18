@@ -22,7 +22,7 @@ class ProductCatalogAPI(Resource):
         return product_schema.dump(product), 201
 
 
-class ProductAPI(MethodView):
+class ProductAPI(Resource):
     def get(self, id):
         product = db.get_or_404(Product, id)
         return product_schema.dump(product)
